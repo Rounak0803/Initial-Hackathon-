@@ -24,7 +24,7 @@ app.post('/api/generate-exam', async (req, res) => {
     // The prompt that was too complex for the local device
     const prompt = `Act as an academic professor. Generate a ${difficulty} level mock exam with ${questionCount} questions about ${topic}. Include a detailed answer key at the bottom.`;
     
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     const result = await model.generateContent(prompt);
     const response = await result.response;
     
